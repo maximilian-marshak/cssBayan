@@ -1,0 +1,33 @@
+.cssBayan {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.cssBayan__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.cssBayan__description img {
+    margin: 0 auto;
+}
+
+.cssBayan_element-title {
+    display: block;
+    color: #00f;
+
+    cursor: pointer;
+}
+
+.cssBayan__description {
+    display: none;
+}
+
+.cssBayan__toggle:checked ~ .cssBayan_element-title {
+    color: #000;
+}
+
+.cssBayan__toggle:checked ~ .cssBayan__description {
+    display: block;
+}
