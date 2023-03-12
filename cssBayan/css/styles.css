@@ -1,27 +1,79 @@
 .cssBayan {
-    max-width: 1920px;
+    max-width: 120rem;
     margin: 0 auto;
+}
+
+.cssBayan__title {
+    font-size: 2.875em;
 }
 
 .cssBayan__list {
     padding: 0;
     margin: 0;
     list-style: none;
+
+    color: #00f;
 }
 
-.cssBayan__description img {
-    margin: 0 auto;
+.cssBayan__list:hover {
+    color: #000;
+}
+
+.cssBayan__element--container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cssBayan__element--container:hover {
+    cursor: pointer;
 }
 
 .cssBayan_element-title {
     display: block;
-    color: #00f;
+
+    font-size: 1.5em;
+    font-weight: 700;
+
+    padding: 10px 0 15px 0;
 
     cursor: pointer;
 }
 
+.cssBayan__element--toggle {
+    display: none;
+}
+
+.cssBayan__list:hover .cssBayan__element--toggle  {
+    display: block;
+}
+
+.cssBayan__element--toggle img {
+    width: 3em;
+    height: 3em;
+}
+
+.toggle-cross {
+    display: none;
+}
+
+.cssBayan__toggle:checked ~ .toggle-cross {
+    display: block;
+}
+
+.cssBayan__toggle:checked ~ .toggle-plus {
+    display: none;
+}
+
 .cssBayan__description {
     display: none;
+}
+
+.cssBayan-container {
+    display: flex;
+}
+
+.cssBayan-container img {
+    margin: 0 auto;
 }
 
 .cssBayan__toggle:checked ~ .cssBayan_element-title {
