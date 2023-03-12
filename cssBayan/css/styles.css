@@ -19,6 +19,17 @@
     color: #000;
 }
 
+.cssBayan__element:hover {
+     cursor: pointer;
+     transition: 0.4s;
+}
+
+.cssBayan__element:active {
+    color: #00f;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .cssBayan__element--container {
     display: flex;
     justify-content: space-between;
@@ -26,6 +37,7 @@
 
 .cssBayan__element--container:hover {
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .cssBayan_element-title {
@@ -39,15 +51,21 @@
     cursor: pointer;
 }
 
-.cssBayan__element--toggle {
+.cssBayan__element--container:hover {
+    color: #00f;
+    transition: 0.4s;
+}
+
+.toggle-plus {
     display: none;
 }
 
-.cssBayan__list:hover .cssBayan__element--toggle  {
+.cssBayan__list:hover .toggle-plus  {
     display: block;
+    transition: 0.4s;
 }
 
-.cssBayan__element--toggle img {
+.toggle-plus{
     width: 3em;
     height: 3em;
 }
@@ -56,12 +74,8 @@
     display: none;
 }
 
-.cssBayan__toggle:checked ~ .toggle-cross {
-    display: block;
-}
-
-.cssBayan__toggle:checked ~ .toggle-plus {
-    display: none;
+.cssBayan__toggle:checked .toggle-plus {
+    transform: rotate(45deg);
 }
 
 .cssBayan__description {
@@ -82,4 +96,36 @@
 
 .cssBayan__toggle:checked ~ .cssBayan__description {
     display: block;
+}
+
+@media (max-width: 51.25rem) {
+    .cssBayan__title {
+        font-size: 2em;
+    }
+
+    .cssBayan_element-title {
+        font-size: 1.25em;
+    }
+
+     .cssBayan-container img {
+        width: 17.5rem;
+    }
+
+    .toggle-plus {
+        width: 2.5em;
+    }
+}
+
+@media (max-width: 20rem) {
+    .cssBayan__title {
+        font-size: 1.5em;
+    }   
+
+    .cssBayan_element-title {
+        font-size: 1em;
+    }
+
+    .toggle-plus {
+        width: 1.5em;
+    }
 }
